@@ -1,20 +1,35 @@
 {
-  "name": "toret-lambda",
+  "name": "adopt-a-toret-devshop-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compile": "hardhat compile",
+    "deploy:local": "hardhat run --network localhost scripts/deploy.js",
+    "deploy:goerli": "hardhat run --network goerli scripts/deploy.js",
+    "test": "hardhat test"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "ethers": "^5.4.7",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "autoprefixer": "^10.3.7",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
     "eslint": "8.0.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "ethereum-waffle": "^3.4.0",
+    "hardhat": "^2.6.5",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16"
   }
 }
